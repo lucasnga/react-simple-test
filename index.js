@@ -22,20 +22,26 @@ class MyComponent extends React.Component {
 	}
 
 	render() {
-		return (
-			<div>
-				<p>{this.state.value}</p>
-				
-				<button onClick={this.incHandler}>
-					+
-				</button>
-				
-				<button onClick={this.decHandler}>
-					-
-				</button>
-			</div>
+		return React.createElement(
+			"div",
+			null,
+			React.createElement(
+				"p",
+				null,
+				this.state.value
+			),
+			React.createElement(
+				"button",
+				{ onClick: this.incHandler },
+				"+"
+			),
+			React.createElement(
+				"button",
+				{ onClick: this.decHandler },
+				"-"
+			)
 		);
 	}
 }
 
-ReactDOM.render(<MyComponent />, document.getElementById("root"));
+ReactDOM.render(React.createElement(MyComponent, null), document.getElementById("root"));
