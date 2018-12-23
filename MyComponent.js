@@ -44,6 +44,8 @@ class MyComponent extends React.Component {
 	}
 }
 
-exports = Object.assign(exports, {
-	default: MyComponent
-});
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	exports = Object.assign(exports, {
+		default: MyComponent
+	});
+}
