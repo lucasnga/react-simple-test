@@ -26,6 +26,11 @@ class MyComponent extends React.Component {
 			"div",
 			null,
 			React.createElement(
+				"button",
+				{ onClick: this.decHandler },
+				"-"
+			),
+			React.createElement(
 				"p",
 				null,
 				this.state.value
@@ -34,11 +39,6 @@ class MyComponent extends React.Component {
 				"button",
 				{ onClick: this.incHandler },
 				"+"
-			),
-			React.createElement(
-				"button",
-				{ onClick: this.decHandler },
-				"-"
 			)
 		);
 	}
