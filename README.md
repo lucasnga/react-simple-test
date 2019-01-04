@@ -3,6 +3,7 @@
 Simple React component (without babel, webpack, JSX) test using couple of technologies:
 - [JestJS](https://jestjs.io/)
 - [Enzyme](https://airbnb.io/enzyme/)
+- [Cypress](https://www.cypress.io/)
 
 ## Working example on github.io
 	
@@ -23,8 +24,22 @@ npm install
 
 ## Usage
 
-runing tests:
+To run tests:
 
 ```bash
 npm test
+```
+
+To run cypress tests you need to run two commands on separate terminals:
+
+- first run the server
+
+```bash
+npm run server
+```
+
+- second run cypress
+
+```bash
+npm run cypress
 ```
